@@ -1,0 +1,165 @@
+/* Center the login container on the page */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Login box */
+.login-container {
+  display: flex;
+  width: 1100px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+/* Left side (Form) */
+.form-container {
+  background: linear-gradient(135deg, #1a7e49, #829f29, #39ab4c);
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.form-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: beige;
+}
+
+/* Input fields */
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #2a2d45;
+  color: whitesmoke;
+  width: 100%;
+}
+
+/* Icons inside input */
+.field-icon {
+  position: absolute;
+  left: 10px;
+  color: beige;
+}
+
+/* Toggle password icon */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: beige;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #283593, #3949ab);
+  border: none;
+  border-radius: 8px;
+  color: beige;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #1a237e, #283593);
+}
+
+/* Forgot password */
+.forgot-password {
+  text-align: right;
+  font-size: 14px;
+}
+
+.forgot-password a {
+  color: #5668c4;
+  text-decoration: none;
+}
+/* Google Sign-in Button */
+.google-btn {
+  width: 100%;
+  padding-top: 10px;
+  padding: 12px;
+  background: white;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.google-btn i, .google-btn span {
+  font-size: 20px;
+  color: #DB4437; /* Google red color */
+}
+
+.google-btn:hover {
+  background: #f8f9fa;
+  border-color: #aaa;
+}
+
+
+/* Improve input field focus */
+input:focus {
+  outline: none;
+  border: 2px solid #66b3ff;
+}
+
+/* Right side (Image) */
+.pattern-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.pattern-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .pattern-container img {
+    width: 80%;
+    height: auto;
+  }
+}

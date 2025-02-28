@@ -1,0 +1,71 @@
+.container {
+  padding-top: 50px;
+}
+
+.category-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+  justify-content: center;
+  gap: 10px; /* Add spacing between items */
+}
+
+.category-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Hover & Active effect */
+}
+
+.card2 {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.category-image:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Active State - Highlight selected category */
+.category-item.active img {
+  border: 3px solid #ff6600; /* Highlight active category */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.category-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .category-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .category-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .category-name {
+    font-size: 0.8rem;
+  }
+}
